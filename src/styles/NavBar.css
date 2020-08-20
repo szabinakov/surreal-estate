@@ -1,0 +1,17 @@
+.navbar {
+    border-bottom: 1px solid black;
+    background-color: rgba(158, 158, 158, 0.144);
+}
+.logo {
+    height: 40px;
+    margin-left: 10px;
+}
+.navbar-links{
+    margin-top: -30px;
+    text-align: end;
+    border: solid gainsboro
+}
+.navbar-links-item {
+    display: inline-block;
+    padding-right: 40px;
+}
