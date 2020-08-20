@@ -9,9 +9,16 @@
 .navbar-links{
     margin-top: -30px;
     text-align: end;
-    border: solid gainsboro
+}
+li {
+    display: inline-block;
 }
 .navbar-links-item {
-    display: inline-block;
     padding-right: 40px;
+    text-decoration-style: none;
+    color: black;
+    text-decoration: none;
+}
+.navbar-links-item:hover {
+    color: coral;
 }

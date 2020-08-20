@@ -1,9 +1,15 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import App from '../components/App';
+import { BrowserRouter } from 'react-router-dom'
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/Surreal Estate/i);
-  expect(linkElement).toBeInTheDocument();
-});
+describe('App', () => {
+  it('renders correctly', ()=> {
+    const {asFragment} = render (
+      <BrowserRouter>
+      <App/>
+      </BrowserRouter>
+      )
+
+    expect(asFragment).toMatchSnapshot()
+  })})

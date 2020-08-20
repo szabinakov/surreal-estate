@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/NavBar.css'
 import logo from '../logo.png'
+import { Link } from 'react-router-dom'
 
 const NavBar = () => {
     return(
@@ -8,8 +9,12 @@ const NavBar = () => {
         <div className='navbar'>
         <img className='logo' src={logo} alt='Website Logo'></img>
             <ul className='navbar-links'>
-                <li className='navbar-links-item'>View Properties</li>
-                <li className='navbar-links-item'>Add Properties</li>
+                <li>
+                   <Link className='navbar-links-item' to='/'>View Properties</Link>
+                </li>
+                <li>
+                    <Link className='navbar-links-item' to='/add-property'>Add Property</Link>
+                </li>
             </ul>
         </div>
 
