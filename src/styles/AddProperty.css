@@ -1,0 +1,17 @@
+.AddProperty {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.FormContainer{
+    width: 300px;
+    border: 1px solid black;
+    text-align: center;
+}
+.FormInput,.FormSelectCity,.FormSelectType,.FormRoom,.FormMaximumPrice, .FormEmail,.FormBathroom  {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin: 10px;
+}
