@@ -7,10 +7,10 @@ const AddProperty = () => {
         fields: {
             title: '',
             type:'',
-            bedrooms: null,
-            bathrooms: null,
+            bedrooms: 0,
+            bathrooms: 0,
             price: 0,
-            city: 'Manchester',
+            city: '',
             email: ''
         }
     }
@@ -19,7 +19,13 @@ const AddProperty = () => {
 
     const handleAddProperty = (event) => {
         event.preventDefault()
-        console.log(fields)
+        axios.post('http://localhost:4000/api/v1/PropertyListing', fields)
+        .then(res => { 
+            console.log(res)
+        })
+        .catch(err=> {
+            console.log(err)
+        })
     }
     const handleFieldChange = (event) => {
         setFields({...fields, [event.target.name]: event.target.value})
@@ -66,24 +72,24 @@ const AddProperty = () => {
                     </select>
                 </div>
                 <div className='FormRoom'>
-                    <label htmlFor='room'>Number of Rooms</label>
+                    <label htmlFor='bedrooms'>Number of Rooms</label>
                     <input 
-                        id='room' 
+                        id='bedrooms' 
                         type='number' 
-                        name='room' 
+                        name='bedrooms' 
                         value={fields.bedrooms}
                         onChange={handleFieldChange}
                     ></input>
                 </div>
                 <div className='FormBathroom'>
-                    <label htmlFor='bathroom'>Number of Bathrooms</label>
+                    <label htmlFor='bathrooms'>Number of Bathrooms</label>
                     <input 
-                        id='bathroom' 
+                        id='bathrooms' 
                         type='number' 
-                        name='bathroom' 
+                        name='bathrooms' 
                         value={fields.bathrooms}
-                        onChange={handleFieldChange}
-                    ></input>
+                        onChange={handleFieldChange}>
+                    </input>
                 </div>
                 <div className='FormMaximumPrice'>
                     <label htmlFor='price'>Maximum Price</label>
