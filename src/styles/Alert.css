@@ -1,0 +1,14 @@
+
+.Alert.alert-success {
+    background-color: rgb(149, 228, 149);
+    border-radius: 3%;
+    margin: 6px;
+    color: rgb(0, 63, 0);
+}
+
+.Alert.alert-error {
+        background-color: rgb(245, 131, 131);
+        border-radius: 3%;
+        margin: 6px;
+        color: rgb(105, 0, 0);
+}
