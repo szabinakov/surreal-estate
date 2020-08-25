@@ -10,6 +10,6 @@ describe('Navbar', () => {
         <NavBar/>
         </BrowserRouter>)
 
-        expect(asFragment).toMatchSnapshot()
+        expect(asFragment()).toMatchSnapshot()
     })
 })
