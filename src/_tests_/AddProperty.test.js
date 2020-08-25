@@ -6,6 +6,6 @@ describe('AddProperty', () => {
     it('renders correctly', () => {
         const {asFragment} = render (<AddProperty/>)
 
-        expect(asFragment).toMatchSnapshot()
+        expect(asFragment()).toMatchSnapshot()
     })
 })

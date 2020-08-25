@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import '../styles/AddProperty.css'
 import axios from 'axios'
+import '../styles/Alert.css'
+import Alert from './Alert'
 
 const AddProperty = () => {
     const initialState = {
@@ -12,27 +14,36 @@ const AddProperty = () => {
             price: 0,
             city: '',
             email: ''
+        },
+        alert: {
+            message: '',
+            isSuccess: false
         }
     }
 
     const [fields, setFields] = useState(initialState.fields)
+    const [alert, setAlert] = useState(initialState.alert)
 
     const handleAddProperty = (event) => {
         event.preventDefault()
+        setAlert({message:'', isSuccess:false})
         axios.post('http://localhost:4000/api/v1/PropertyListing', fields)
-        .then(res => { 
-            console.log(res)
+        .then(() => { 
+            setAlert({ message:'Property Added', isSuccess:true})
         })
-        .catch(err=> {
-            console.log(err)
+        .catch(()=> {
+            setAlert({ message:'Error!, Please try to add again!', isSuccess:false})
         })
     }
     const handleFieldChange = (event) => {
         setFields({...fields, [event.target.name]: event.target.value})
     }
+
     return (
+    <>
         <div className='AddProperty'>
             <form onSubmit={handleAddProperty} className='FormContainer'>
+                <Alert message={alert.message} success={alert.isSuccess}/>
                 <div className='FormInput'>
                     <label htmlFor='title'>Title of the Property</label>
                     <input 
@@ -40,7 +51,8 @@ const AddProperty = () => {
                         name='title' 
                         value={fields.title} 
                         onChange={handleFieldChange}
-                        placeholder='Title'></input>
+                        placeholder='Title'>
+                    </input>
                 </div>
                 <div className='FormSelectCity'>
                     <label htmlFor='city'>City</label>
@@ -78,8 +90,8 @@ const AddProperty = () => {
                         type='number' 
                         name='bedrooms' 
                         value={fields.bedrooms}
-                        onChange={handleFieldChange}
-                    ></input>
+                        onChange={handleFieldChange}>
+                    </input>
                 </div>
                 <div className='FormBathroom'>
                     <label htmlFor='bathrooms'>Number of Bathrooms</label>
@@ -108,8 +120,8 @@ const AddProperty = () => {
                         name='email' 
                         value={fields.email}
                         onChange={handleFieldChange}
-                        placeholder='john.doe@gmail.com'
-                    ></input>
+                        placeholder='john.doe@gmail.com'>
+                    </input>
                 </div>
                 <button 
                     className='FormAddButton' 
@@ -118,6 +130,7 @@ const AddProperty = () => {
                 </button>
             </form>
         </div> 
+</>
     )
 }
 
