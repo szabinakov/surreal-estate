@@ -2,8 +2,11 @@
 
 exports[`Properties renders correctly 1`] = `
 <DocumentFragment>
-  <div>
+  <h2>
     Properties
-  </div>
+  </h2>
+  <div
+    class="PropertyContainer"
+  />
 </DocumentFragment>
 `;

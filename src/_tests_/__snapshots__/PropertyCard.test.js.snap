@@ -3,15 +3,15 @@
 exports[`PropertyCard matches the snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="PropertyCard"
+    class="PropertyContainer"
   >
-    <img
-      alt="Placeholder Property"
-      src="PlaceholderPic.png"
-    />
     <div
-      class="PropertyDetailsDiv"
+      class="EachProperty"
     >
+      <img
+        alt="Placeholder Property"
+        src="PlaceholderPic.png"
+      />
       <div
         class="titleDiv"
         data-testid="titleId"
@@ -79,7 +79,7 @@ exports[`PropertyCard matches the snapshot 1`] = `
             fill="currentColor"
           />
         </svg>
-        2
+        1
       </div>
       <div
         class="priceDiv"
@@ -100,7 +100,7 @@ exports[`PropertyCard matches the snapshot 1`] = `
             fill="currentColor"
           />
         </svg>
-        12300
+        12000
       </div>
       <div
         class="cityDiv"
@@ -121,7 +121,7 @@ exports[`PropertyCard matches the snapshot 1`] = `
             fill="currentColor"
           />
         </svg>
-        Leeds
+        Manchester
       </div>
       <div
         class="emailDiv"
@@ -143,7 +143,7 @@ exports[`PropertyCard matches the snapshot 1`] = `
           />
         </svg>
         <a
-          href="this.is@theemail"
+          href="this.email@thisemail.com"
         >
           Send Email!
         </a>
