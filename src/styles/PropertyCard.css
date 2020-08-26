@@ -1,0 +1,18 @@
+.PropertyCard{
+    border: 1px solid black;
+    width:220px
+}
+img {
+    padding: 10px;
+}
+.PropertyDetailsDiv {
+    padding: 10px;
+}
+.titleDiv {
+    text-align: center;
+    padding-bottom: 10px;
+}
+.icon {
+    text-align: start;
+    padding-right: 10px;
+}
