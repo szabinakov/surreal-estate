@@ -1,0 +1,9 @@
+.SideBar {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+p {
+    padding: 10px;
+}
