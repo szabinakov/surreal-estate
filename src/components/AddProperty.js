@@ -104,10 +104,10 @@ const AddProperty = () => {
                     </input>
                 </div>
                 <div className='FormMaximumPrice'>
-                    <label htmlFor='price'>Maximum Price</label>
+                    <label htmlFor='price'>Price</label>
                     <input 
                         id='price' 
-                        type='number' 
+                        type='price' 
                         name='price' 
                         value={fields.price}
                         onChange={handleFieldChange}>

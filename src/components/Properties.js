@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import {useLocation} from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import '../styles/Properties.css'
 
 import axios from 'axios'
@@ -18,6 +18,7 @@ const Properties = () => {
     const [properties, setProperties] = useState([])
     const [alert, setAlert] = useState(initialState.alert)
     const { search } = useLocation()
+    
 
     useEffect(() => {
         axios.get(`http://localhost:4000/api/v1/PropertyListing${search}`)

@@ -142,12 +142,12 @@ exports[`AddProperty renders correctly 1`] = `
         <label
           for="price"
         >
-          Maximum Price
+          Price
         </label>
         <input
           id="price"
           name="price"
-          type="number"
+          type="price"
           value="0"
         />
       </div>

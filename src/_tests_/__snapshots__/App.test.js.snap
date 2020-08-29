@@ -31,8 +31,73 @@ exports[`App renders correctly 1`] = `
       </li>
     </ul>
   </div>
-  <div>
+  <h2>
     Properties
+  </h2>
+  <div
+    class="SideBar"
+  >
+    <form
+      class="SearchForm"
+    >
+      <input
+        class="SearchInput"
+        placeholder="Search!"
+        type="text"
+        value=""
+      />
+      <button
+        class="SearchButton"
+        type="submit"
+      >
+        Search!
+      </button>
+    </form>
+    <p>
+      <a
+        href="/?query={\\"city\\":\\"Manchester\\"}"
+      >
+        Manchester
+      </a>
+    </p>
+    <p>
+      <a
+        href="/?query={\\"city\\":\\"Leeds\\"}"
+      >
+        Leeds
+      </a>
+    </p>
+    <p>
+      <a
+        href="/?query={\\"city\\":\\"Sheffield\\"}"
+      >
+        Sheffield
+      </a>
+    </p>
+    <p>
+      <a
+        href="/?query={\\"city\\":\\"Liverpool\\"}"
+      >
+        Liverpool
+      </a>
+    </p>
+    <p>
+      <a
+        href="/?sort={\\"price\\":1}"
+      >
+        Price Ascending
+      </a>
+    </p>
+    <p>
+      <a
+        href="/?sort={\\"price\\":-1}"
+      >
+        Price Descending
+      </a>
+    </p>
   </div>
+  <div
+    class="PropertyContainer"
+  />
 </DocumentFragment>
 `;
