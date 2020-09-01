@@ -1,4 +1,12 @@
-h2 { 
-    margin-top: 30px;
-    text-align: center;
+.Properties {
+    border-top-style: groove;
+    border-color: rgba(0, 0, 0, 0.096);
+    padding-top: 10px;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.PropertyCards {
+    border: solid salmon;
 }

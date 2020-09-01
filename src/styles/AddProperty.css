@@ -2,16 +2,32 @@
     display: flex;
     justify-content: center;
     margin-top: 30px;
+
 }
 
 .FormContainer{
-    width: 300px;
-    border: 1px solid black;
-    text-align: center;
-}
-.FormInput,.FormSelectCity,.FormSelectType,.FormRoom,.FormMaximumPrice, .FormEmail,.FormBathroom  {
     display: flex;
     flex-direction: column;
-    padding: 5px;
-    margin: 10px;
+    width: 300px;
+    text-align: center;
+    background-color: rgba(252, 244, 230, 0.548);
+    border: 1px solid rgb(248, 205, 125);
+    border-radius: 10px;
+}
+.FormInput,.FormSelectCity,.FormSelectType,.FormRoom,.FormMaximumPrice, .FormEmail,.FormBathroom  {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
+  border-radius: 15px;
+}
+
+.FormAddButton {
+    align-self: center;
+    width: 50px;
+    border: 1px solid rgb(248, 205, 125);
+    border-radius: 145px;
+    padding: 3px;
+    background-color: rgba(253, 219, 151, 0.548);
+    font-size: 13px;
 }

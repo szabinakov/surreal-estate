@@ -38,10 +38,11 @@ const Properties = () => {
 
     return (
         <>
-        <h2>Properties</h2>
         {alert.message && <Alert message={alert.message}/>}
-        <SideBar/>
-        <PropertyCard details={properties}/>
+        <div className='Properties'>
+                <SideBar/>
+                <PropertyCard details={properties}/>
+        </div>
         </>
     )
 }

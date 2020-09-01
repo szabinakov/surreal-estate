@@ -3,12 +3,17 @@ import '../styles/NavBar.css'
 import logo from '../logo.png'
 import { Link } from 'react-router-dom'
 import FacebookLogin from 'react-facebook-login'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faFortAwesomeAlt} from '@fortawesome/free-brands-svg-icons'
 
 const NavBar = ({userID, onLogin, onLogout}) => {
     return(
 
         <div className='navbar'>
-        <img className='logo' src={logo} alt='Website Logo'></img>
+                <h1 className='logo'>
+                    <FontAwesomeIcon icon={faFortAwesomeAlt}/>
+                    Surreal Estate
+                </h1>
             <ul className='navbar-links'>
                 <li>
                    <Link className='navbar-links-item' to='/'>View Properties</Link>
@@ -17,17 +22,17 @@ const NavBar = ({userID, onLogin, onLogout}) => {
                     <Link className='navbar-links-item' to='/add-property'>Add Property</Link>
                 </li>
             </ul>
-            <div>
+            <div className='facebook-buttons'>
                 {userID
-                ?   <button onClick={onLogout} className='FacebookLogout'>Log Out</button>
+                ?   <button onClick={onLogout} className='facebook-logout'>Log Out</button>
                 :   <FacebookLogin
                         appId="230725981691233"
                         autoLoad={true}
                         fields="name,email,picture"
                         callback={onLogin}
-                        className='FacebookLogin'
+                        cssClass='facebook-login'
                 />}
-                </div>
+            </div>
         </div>
 
     )

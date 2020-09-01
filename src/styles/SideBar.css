@@ -1,9 +1,29 @@
-.SideBar {
-
+.SearchForm {   
+    text-align: center;
+}
+.SearchButton {
+    width: 80px;
+}
+.SearchInput {
+    border-radius: 15px;
+    border: 1px solid rgba(248, 205, 125, 0.527);
+    padding: 3px;
+}
+h3 {
+    text-align: center;
+    margin-bottom: 0px;
+}
+.FilterByCity,.SortBy {
     display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
 }
-p {
-    padding: 10px;
+.SearchCityLink,.SortPriceLink {
+    color: black;
+    text-decoration: none;
+    border: 1px solid rgba(248, 205, 125, 0.527);
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: white;
+    font-size: 13px;
 }

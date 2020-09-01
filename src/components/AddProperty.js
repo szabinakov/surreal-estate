@@ -85,23 +85,31 @@ const AddProperty = () => {
                 </div>
                 <div className='FormRoom'>
                     <label htmlFor='bedrooms'>Number of Rooms</label>
-                    <input 
+                    <select 
                         id='bedrooms' 
-                        type='number' 
                         name='bedrooms' 
-                        value={fields.bedrooms}
+                        value={fields.bedrooms} 
                         onChange={handleFieldChange}>
-                    </input>
+                            <option value='1'>1</option>
+                            <option value='2'>2</option>
+                            <option value='3'>3</option>
+                            <option value='4'>4</option>
+                            <option value='5'>5</option>
+                            <option value='5+'>5+</option>
+                    </select>
                 </div>
                 <div className='FormBathroom'>
                     <label htmlFor='bathrooms'>Number of Bathrooms</label>
-                    <input 
+                    <select 
                         id='bathrooms' 
-                        type='number' 
                         name='bathrooms' 
-                        value={fields.bathrooms}
+                        value={fields.bathrooms} 
                         onChange={handleFieldChange}>
-                    </input>
+                            <option value='1'>1</option>
+                            <option value='2'>2</option>
+                            <option value='3'>3</option>
+                            <option value='3+'>3+</option>
+                    </select>
                 </div>
                 <div className='FormMaximumPrice'>
                     <label htmlFor='price'>Price</label>
