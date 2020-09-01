@@ -34,7 +34,7 @@ const PropertyCard = ({details}) => {
                 </div>
                 <div data-testid='emailId' className='emailDiv'>
                     <FontAwesomeIcon className='icon' icon={faEnvelope}/>
-                    <a href={property.email}>Send Email!</a>
+                    <a href={property.email}>Email</a>
                 </div>
             </div>
             )
