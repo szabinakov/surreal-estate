@@ -1,4 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 import PlaceholderPic from '../PlaceholderPic.png'
 import '../styles/PropertyCard.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -47,7 +49,9 @@ const PropertyCard = ({details}) => {
 
 }
 
-
+PropertyCard.propTypes = {
+    details: PropTypes.array.isRequired
+}
 
 export default PropertyCard
 

@@ -1,8 +1,11 @@
 import React from 'react'
-import '../styles/NavBar.css'
-import logo from '../logo.png'
+
+import PropTypes from 'prop-types'
+
 import { Link } from 'react-router-dom'
 import FacebookLogin from 'react-facebook-login'
+
+import '../styles/NavBar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faFortAwesomeAlt} from '@fortawesome/free-brands-svg-icons'
 
@@ -38,4 +41,9 @@ const NavBar = ({userID, onLogin, onLogout}) => {
     )
 }
 
+NavBar.propTypes = {
+    userID: PropTypes.string.isRequired,
+    onLogin: PropTypes.func.isRequired,
+    onLogout: PropTypes.func.isRequired,
+}
 export default NavBar
