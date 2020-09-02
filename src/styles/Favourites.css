@@ -1,0 +1,12 @@
+.Favourites {
+    border-top-style: groove;
+    border-color: rgba(0, 0, 0, 0.096);
+    padding-top: 10px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+h1 {
+    font-size: 22px;
+    text-align: center;
+}

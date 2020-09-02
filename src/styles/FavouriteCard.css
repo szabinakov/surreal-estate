@@ -1,0 +1,44 @@
+.FavouriteContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.EachFavourite {
+    border: 1px solid #FAA307;
+    border-radius: 1%;
+    margin: 15px;
+}
+img {
+    padding: 3px;
+}
+.icon {
+    text-align: start;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.titleFav,.typeFav, .bedroomsFav, .bathroomsFav, .priceFav, .cityFAv, .emailFav {
+    padding: 5px 5px 5px 0px;
+}
+.emailFav {
+    padding: 10px;
+    background-color: #9d0208;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bolder;
+    color: white;
+    border: 2px solid;
+}
+
+.titleFav {
+    text-align: center;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+.FavEmailLink:visited {
+color: white;
+}
+
+.emailFav:hover {
+    border-color: #FAA307
+}
