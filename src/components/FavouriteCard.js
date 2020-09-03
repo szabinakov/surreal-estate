@@ -11,30 +11,30 @@ const FavouriteCard = ({_id, title, type, bedrooms, bathrooms, city, email, pric
                 
                 <div className='EachFavourite' >
                 <img src={PlaceholderPic} alt='Placeholder Property'/>
-                <div data-testid='titleId' className='titleFav'>
+                <div data-testid='favTitleId' className='titleFav'>
                     {title}
                 </div>
-                <div data-testid='typeId' className='typeFav'>
+                <div data-testid='favTypeId' className='typeFav'>
                     <FontAwesomeIcon className='icon' icon={faHome}/>
                     {type}
                 </div>
-                <div data-testid='bedroomsId' className='bedroomsFav'>
+                <div data-testid='favBedroomsId' className='bedroomsFav'>
                     <FontAwesomeIcon className='icon' icon={faBed}/>
                     {bedrooms}
                 </div>
-                <div data-testid='bathroomsId' className='bathroomsFav'>
+                <div data-testid='favBathroomsId' className='bathroomsFav'>
                     <FontAwesomeIcon className='icon' icon={faBath}/>
                     {bathrooms}
                 </div>
-                <div data-testid='priceId' className='priceFav'>
+                <div data-testid='favPriceId' className='priceFav'>
                     <FontAwesomeIcon className='icon' icon={faPoundSign}/>
                     {price}
                 </div>
-                <div data-testid='cityId' className='cityFav'>
+                <div data-testid='favCityId' className='cityFav'>
                     <FontAwesomeIcon className='icon' icon={faCity}/>
                     {city}
                 </div>
-                <div data-testid='emailId' className='emailFav'>
+                <div data-testid='favEmailId' className='emailFav'>
                     <FontAwesomeIcon className='icon' icon={faEnvelope}/>
                     <a className='FavEmailLink' href={email}>Email</a>
                 </div>
