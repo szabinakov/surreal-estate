@@ -143,9 +143,10 @@ exports[`PropertyCard matches the snapshot 1`] = `
           />
         </svg>
         <a
+          class="emailLink"
           href="this.email@thisemail.com"
         >
-          Send Email!
+          Email
         </a>
       </div>
     </div>
