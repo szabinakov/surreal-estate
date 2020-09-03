@@ -2,47 +2,47 @@ import React from 'react'
 import '../styles/FavouriteCard.css'
 import PlaceholderPic from '../PlaceholderPic.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faBed, faBath, faPoundSign, faCity, faHome, faEnvelope} from '@fortawesome/free-solid-svg-icons'
+import {faBed, faBath, faPoundSign, faCity, faHome, faEnvelope, faTrashAlt} from '@fortawesome/free-solid-svg-icons'
 
-const FavouriteCard = ({details}) => {
+const FavouriteCard = ({_id, title, type, bedrooms, bathrooms, city, email, price, removeFavourite}) => {
 
-    const eachProperty = details.map((property, index) => 
-            <div className='EachFavourite' key={index}>
+
+            return (
+                
+                <div className='EachFavourite' >
                 <img src={PlaceholderPic} alt='Placeholder Property'/>
                 <div data-testid='titleId' className='titleFav'>
-                    {property.title}
+                    {title}
                 </div>
                 <div data-testid='typeId' className='typeFav'>
                     <FontAwesomeIcon className='icon' icon={faHome}/>
-                    {property.type}
+                    {type}
                 </div>
                 <div data-testid='bedroomsId' className='bedroomsFav'>
                     <FontAwesomeIcon className='icon' icon={faBed}/>
-                    {property.bedrooms}
+                    {bedrooms}
                 </div>
                 <div data-testid='bathroomsId' className='bathroomsFav'>
                     <FontAwesomeIcon className='icon' icon={faBath}/>
-                    {property.bathrooms}
+                    {bathrooms}
                 </div>
                 <div data-testid='priceId' className='priceFav'>
                     <FontAwesomeIcon className='icon' icon={faPoundSign}/>
-                    {property.price}
+                    {price}
                 </div>
                 <div data-testid='cityId' className='cityFav'>
                     <FontAwesomeIcon className='icon' icon={faCity}/>
-                    {property.city}
+                    {city}
                 </div>
                 <div data-testid='emailId' className='emailFav'>
                     <FontAwesomeIcon className='icon' icon={faEnvelope}/>
-                    <a className='FavEmailLink' href={property.email}>Email</a>
+                    <a className='FavEmailLink' href={email}>Email</a>
                 </div>
+                <button onClick={() => removeFavourite(_id)} className='RemoveButton'>
+                    <FontAwesomeIcon className='icon' icon={faTrashAlt}/>
+                    Remove Favourite
+                </button>
             </div>
-            )
-            
-            return (
-                <div className='FavouriteContainer'>
-                    {eachProperty}
-                </div>
             )
         
 }

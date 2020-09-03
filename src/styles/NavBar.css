@@ -1,33 +1,39 @@
-
+.navbar {
+    font-weight: bold;
+}
 .logo{
     text-align: center;
     margin: 0px;
     padding: 30px;
+    font-size: 35px;
 }
 h1 {
     font-size: 35px;
 }
 .navbar-links {
-    background-color: rgb(255, 203, 106);
+    background-color: #FAA307;
+    height: 40px;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     list-style: none;
-    margin: 0px;
+    margin-top: -30px;
     padding: 0px;
 }
 .navbar-links-item {
     text-decoration: none;
     color: black;
-    border-radius: 145px;
-    padding: 3px;
+    padding: 10px;
+    padding-top: 12px;
     font-size: 13px;
 }
 .navbar-links-item:hover {
-    background-color: rgba(255, 218, 185, 0.788);
+    border: solid #ffba08;
 }
 .facebook-buttons {
     text-align: center;
-    margin: 20px;
+    margin: 0px;
+    margin-bottom: -30px;
 }
 .facebook-logout{
     background-color: #3B5998;

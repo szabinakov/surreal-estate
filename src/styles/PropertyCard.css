@@ -4,7 +4,7 @@
     justify-content: space-evenly;
 }
 .EachProperty {
-    border: 1px solid orange;
+    border: 1px solid #FAA307;
     border-radius: 1%;
     margin: 15px;
 }
@@ -16,15 +16,25 @@ img {
     padding-left: 10px;
     padding-right: 10px;
 }
-.EachProperty:hover {
-    transform: scale(1.1);
-}
+
 .titleDiv,.typeDiv, .bedroomsDiv, .bathroomsDiv, .priceDiv, .cityDiv, .emailDiv {
     padding: 5px 5px 5px 0px;
 }
 .emailDiv {
     padding: 10px;
-    background-color: orange;
+    background-color: #FAA307;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bolder;
+    color: white;
+    border: 2px solid;
+}
+.saveButton {
+    width: 100%;
+    border:solid;
+    border-width:  0px 2px 2px 2px ;
+    padding: 10px;
+    background-color: #FAA307;
     text-align: center;
     font-size: 16px;
     font-weight: bolder;
@@ -35,7 +45,21 @@ img {
     padding-bottom: 10px;
     font-weight: bold;
 }
-a:link {
+.emailDiv:hover {
+    transform: scale(1.1);
+}
+.saveButton:hover {
+    transform: scale(1.1);
+    border:solid;
+    border-width:  2px ;
+}
+.saveButton:active {
+    color: rgb(106, 4, 15)
+}
+.saveButton:focus {
+    color: rgb(106, 4, 15)
+}
+.emailLink {
     text-decoration: none;
     color: white;
 }

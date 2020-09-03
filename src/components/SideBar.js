@@ -51,46 +51,42 @@ const SideBar = () => {
             </form>
             <h3>Filter By City</h3>
             <div className='FilterByCity'>
-            <p>
+            
                 <Link 
                 to={buildQueryString('query', {city: 'Manchester'})}
                 className='SearchCityLink'>
                     Manchester</Link>
-            </p>
-            <p>
+            
                 <Link 
                 to={buildQueryString('query', {city: 'Leeds'})}
                 className='SearchCityLink'>
                     Leeds</Link>
-            </p>
-            <p>
+           
                 <Link 
                 to={buildQueryString('query', {city: 'Sheffield'})}
                 className='SearchCityLink'
                 >Sheffield</Link>
-            </p>
-            <p>
+            
                 <Link 
                 to={buildQueryString('query', {city: 'Liverpool'})}
                 className='SearchCityLink'>
                     Liverpool</Link>
-            </p>
+           
             </div>
             
                 <h3>Sort By</h3>
             <div className='SortBy'>
-            <p>
+            
                 <Link 
                 to={buildQueryString('sort',  { price: 1 })}
                 className='SortPriceLink'>
                     Price Ascending</Link>
-            </p>
-            <p>
+            
                 <Link 
                 to={buildQueryString('sort', { price: -1 })}
                 className='SortPriceLink'>
                     Price Descending</Link>
-            </p>
+            
             </div>
         </div>
 

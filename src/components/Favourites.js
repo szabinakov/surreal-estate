@@ -1,23 +1,55 @@
 import React, { useState,useEffect } from 'react'
 import FavouriteCard from './FavouriteCard'
+import Alert from './Alert'
 import axios from 'axios'
 import '../styles/Favourites.css'
 
 const Favourites = () => {
 
     const [favourites, setFavourites] = useState([])
+    const [alert, setAlert] = useState({message: '', isSuccess: false})
 
     useEffect(()=> {
         axios.get('http://localhost:4000/api/v1/Favourite?populate=propertyListing')
-        .then((res) => setFavourites((res.data.map(obj => obj.propertyListing))))
+        .then(
+        (res) => 
+        setFavourites((res.data)))
         .catch(err=> console.log(err))
 
     })
 
+
+    const removeFavourite = (_id) => {
+        axios.delete(`http://localhost:4000/api/v1/Favourite/${_id}`)
+        .then(()=> setFavourites(favourites.filter((favourite) => favourite._id !== _id )))
+        .then(() => setAlert({message:'Deleteted', isSuccess: true}))
+        .then(setTimeout(() => setAlert({message:'', isSuccess:false}), 1000 ))
+        .catch((err) => setAlert({message:'Server Error, please try again!', isSuccess:false}))
+        
+    }
+
+
     return (
        <div className='Favourites'>
            <h1>My Favourites</h1>
-        <FavouriteCard details={favourites}/>
+           <Alert message={alert.message} success={alert.isSuccess}/>
+            {favourites.length === 0 
+                ? <h2>You have no Favourites saved yet!</h2>
+                : <div  className='FavouriteContainer'>
+                    {favourites.map((favourite, index) => 
+                        <FavouriteCard
+                            key={index}
+                            _id={favourite._id}
+                            title={favourite.propertyListing.title}
+                            type={favourite.propertyListing.type}
+                            bedrooms={favourite.propertyListing.bedrooms}
+                            bathrooms={favourite.propertyListing.bathrooms}
+                            price={favourite.propertyListing.price}
+                            city={favourite.propertyListing.city}
+                            email={favourite.propertyListing.email}
+                            removeFavourite={removeFavourite} 
+                        />)}
+                    </div>}
        </div>
     )
 }
@@ -25,16 +57,3 @@ const Favourites = () => {
 export default Favourites
 
 
- // <div>
-        //    {favourites.map(details => 
-        //    <>
-        //     <div>{details.title}</div>
-        //     <div>{details.type}</div>
-        //     <div>{details.bedrooms}</div>
-        //     <div>{details.bathrooms}</div>
-        //     <div>{details.price}</div>
-        //     <div>{details.city}</div>
-        //     </>
-        //     )}
-            
-        // </div>

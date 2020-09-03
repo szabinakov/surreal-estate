@@ -1,5 +1,8 @@
 
 .Alert.alert-success {
+    border-radius: 15px;
+    width: 200px;
+    align-self: center;
     background-color: rgb(149, 228, 149);
     border-radius: 3%;
     margin: 6px;
@@ -7,6 +10,9 @@
 }
 
 .Alert.alert-error {
+        border-radius: 15px;
+        width: 200px;
+        align-self: center;
         background-color: rgb(245, 131, 131);
         border-radius: 3%;
         margin: 6px;

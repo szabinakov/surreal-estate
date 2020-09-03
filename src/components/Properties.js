@@ -8,7 +8,7 @@ import Alert from './Alert'
 import SideBar from './SideBar'
 import PropertyCard from './PropertyCard'
 
-const Properties = () => {
+const Properties = ({userID}) => {
 
     const initialState = {
         alert: {
@@ -22,6 +22,7 @@ const Properties = () => {
 
     useEffect(() => {
         axios.get(`http://localhost:4000/api/v1/PropertyListing${search}`)
+
         .then(({data}) => setProperties(data))
         .catch((err)=> console.log(err))
     }, [search])
@@ -36,12 +37,22 @@ const Properties = () => {
         })
     },[])
 
+    const handleSaveProperty = (propertyId) => {
+        axios.post('http://localhost:4000/api/v1/Favourite', {
+            propertyListing: propertyId,
+            fbUserId: userID
+        })
+    }
+
     return (
         <>
         {alert.message && <Alert message={alert.message}/>}
         <div className='Properties'>
                 <SideBar/>
-                <PropertyCard details={properties}/>
+                <PropertyCard 
+                details={properties}
+                userID={userID}
+                onSaveProperty={handleSaveProperty}/>
         </div>
         </>
     )

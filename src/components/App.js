@@ -5,6 +5,7 @@ import { Switch, Route } from 'react-router-dom'
 import NavBar from './NavBar'
 import Properties from './Properties'
 import AddProperty from './AddProperty'
+import Favourites from './Favourites'
 
 function App() {
   const [userID, setUserID] = useState('')
@@ -20,8 +21,9 @@ function App() {
     <>
       <NavBar userID={userID} onLogin={handleLogin} onLogout={handleLogout}/>
       <Switch>
-        <Route exact path='/' component={Properties}/>
+        <Route exact path='/' render={props => <Properties {...props} userID={userID} />}/>
         <Route path='/add-property' component={AddProperty}/>
+        <Route path='/favourites' component={Favourites}/>
       </Switch>
     </>
   );

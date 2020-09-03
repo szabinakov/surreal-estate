@@ -31,6 +31,7 @@ const AddProperty = () => {
         .then(() => { 
             setAlert({ message:'Property Added', isSuccess:true})
         })
+        .then(setTimeout(() => setAlert({message:'', isSuccess:false}), 1000))
         .catch(()=> {
             setAlert({ message:'Error!, Please try to add again!', isSuccess:false})
         })

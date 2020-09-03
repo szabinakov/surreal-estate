@@ -4,9 +4,9 @@ import PropTypes from 'prop-types'
 import PlaceholderPic from '../PlaceholderPic.png'
 import '../styles/PropertyCard.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faBed, faBath, faPoundSign, faCity, faHome, faEnvelope} from '@fortawesome/free-solid-svg-icons'
+import {faBed, faBath, faPoundSign, faCity, faHome, faEnvelope, faHeart} from '@fortawesome/free-solid-svg-icons'
 
-const PropertyCard = ({details}) => {
+const PropertyCard = ({details, userID, onSaveProperty}) => {
 
     const eachProperty = details.map((property, index) => 
             <div className='EachProperty' key={index}>
@@ -36,8 +36,13 @@ const PropertyCard = ({details}) => {
                 </div>
                 <div data-testid='emailId' className='emailDiv'>
                     <FontAwesomeIcon className='icon' icon={faEnvelope}/>
-                    <a href={property.email}>Email</a>
+                    <a className='emailLink' href={property.email}>Email</a>
                 </div>
+                {userID && (
+                <button onClick={()=> onSaveProperty(property._id)} data-testid='saveId' className='saveButton'>
+                    <FontAwesomeIcon className='icon' icon={faHeart}/>
+                    Save
+                </button>)}
             </div>
             )
 

@@ -1,12 +1,13 @@
 .Properties {
-    border-top-style: groove;
-    border-color: rgba(0, 0, 0, 0.096);
     padding-top: 10px;
-    margin-top: 80px;
+    margin-top: 70px;
     display: flex;
     flex-direction: column;
 }
 
-.PropertyCards {
-    border: solid salmon;
+@media screen and (min-width: 750px) {
+    .Properties {
+        display: flex;
+        flex-direction: row;
+    }
 }

@@ -1,8 +1,4 @@
-.FavouriteContainer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
+
 .EachFavourite {
     border: 1px solid #FAA307;
     border-radius: 1%;
@@ -41,4 +37,15 @@ color: white;
 
 .emailFav:hover {
     border-color: #FAA307
+}
+.RemoveButton {
+    width: 100%;
+    padding: 10px;
+    background-color: #9d0208;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bolder;
+    color: white;
+    border: 2px solid;
+    border-width:  0px 2px 2px 2px 
 }
