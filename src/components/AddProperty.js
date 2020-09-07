@@ -27,7 +27,7 @@ const AddProperty = () => {
     const handleAddProperty = (event) => {
         event.preventDefault()
         setAlert({message:'', isSuccess:false})
-        axios.post('https://localhost:4000/api/v1/PropertyListing', fields)
+        axios.post('https://surreal-estate-iota.vercel.app/api/v1/PropertyListing', fields)
         .then(() => { 
             setAlert({ message:'Property Added', isSuccess:true})
         })
