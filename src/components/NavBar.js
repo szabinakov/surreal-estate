@@ -32,7 +32,7 @@ const NavBar = ({userID, onLogin, onLogout}) => {
                 {userID
                 ?   <button onClick={onLogout} className='facebook-logout'>Log Out</button>
                 :   <FacebookLogin
-                        appId="230725981691233"
+                        appId="3161222470662190"
                         autoLoad={true}
                         fields="name,email,picture"
                         callback={onLogin}
