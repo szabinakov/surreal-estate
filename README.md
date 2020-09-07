@@ -29,17 +29,18 @@ On Computer and Mobile:
 ## Run the App
 
 Clone the repository to your computer:
-```https://github.com/szabinakov/surreal-estate.git```
 
-Change directories
+`https://github.com/szabinakov/surreal-estate.git`
+
+Change directories:
 
 `cd surreal-estate`
 
-Install and start npm
+Install and start npm:
 ````
 npm install
 npm start
 ````
 
-#### Author
+### Author
 Szabina Kovacs 
