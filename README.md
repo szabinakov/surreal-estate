@@ -7,8 +7,8 @@ You are able to log in with your facebook account as well. Once you logged in yo
 ## Design
 On Computer and Mobile:
 
-![Computer look](Clook.png)
-![Mobile Look](Mlook.png)
+![Computer look](lookC.png)
+![Mobile Look](lookM.png)
 
 ### Built with
 
