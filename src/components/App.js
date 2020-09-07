@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../styles/App.css';
 import { Switch, Route } from 'react-router-dom'
 
+
 import NavBar from './NavBar'
 import Properties from './Properties'
 import AddProperty from './AddProperty'

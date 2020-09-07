@@ -44,9 +44,10 @@ const NavBar = ({userID, onLogin, onLogout}) => {
     )
 }
 
+
 NavBar.propTypes = {
-    userID: PropTypes.string.isRequired,
-    onLogin: PropTypes.func.isRequired,
-    onLogout: PropTypes.func.isRequired,
+    userID: PropTypes.string,
+    onLogin: PropTypes.func,
+    onLogout: PropTypes.func,
 }
 export default NavBar
