@@ -10,7 +10,7 @@ const Favourites = () => {
     const [alert, setAlert] = useState({message: '', isSuccess: false})
 
     useEffect(()=> {
-        axios.get('https://localhost:4000/api/v1/Favourite?populate=propertyListing')
+        axios.get('http://localhost:4000/api/v1/Favourite?populate=propertyListing')
         .then(
         (res) => 
         setFavourites((res.data)))
