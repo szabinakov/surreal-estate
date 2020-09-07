@@ -10,7 +10,7 @@ const Favourites = () => {
     const [alert, setAlert] = useState({message: '', isSuccess: false})
 
     useEffect(()=> {
-        axios.get('http://szabinakov-surreal-estate.herokuapp.com/api/v1/Favourite?populate=propertyListing')
+        axios.get('https://szabinakov-surreal-estate.herokuapp.com/api/v1/Favourite?populate=propertyListing')
         .then(
         (res) => 
         setFavourites((res.data)))

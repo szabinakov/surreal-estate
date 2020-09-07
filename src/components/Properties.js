@@ -21,14 +21,14 @@ const Properties = ({userID}) => {
     
 
     useEffect(() => {
-        axios.get(`http://szabinakov-surreal-estate.herokuapp.com/api/v1/PropertyListing${search}`)
+        axios.get(`https://szabinakov-surreal-estate.herokuapp.com/api/v1/PropertyListing${search}`)
 
         .then(({data}) => setProperties(data))
         .catch((err)=> console.log(err))
     }, [search])
 
     useEffect(()=>{
-        axios.get('http://szabinakov-surreal-estate.herokuapp.com/api/v1/PropertyListing')
+        axios.get('https://szabinakov-surreal-estate.herokuapp.com/api/v1/PropertyListing')
         .then(response => {
             setProperties(response.data)
         })
@@ -38,7 +38,7 @@ const Properties = ({userID}) => {
     },[])
 
     const handleSaveProperty = (propertyId) => {
-        axios.post('http://szabinakov-surreal-estate.herokuapp.com/api/v1/Favourite', {
+        axios.post('https://szabinakov-surreal-estate.herokuapp.com/api/v1/Favourite', {
             propertyListing: propertyId,
             fbUserId: userID
         })
