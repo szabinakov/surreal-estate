@@ -38,7 +38,7 @@ const Properties = ({userID}) => {
     },[])
 
     const handleSaveProperty = (propertyId) => {
-        axios.post('http://localhost:4000/api/v1/Favourite', {
+        axios.post('https://localhost:4000/api/v1/Favourite', {
             propertyListing: propertyId,
             fbUserId: userID
         })
