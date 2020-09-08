@@ -21,7 +21,7 @@ const Properties = ({userID}) => {
     
 
     useEffect(() => {
-        axios.get(`https://localhost:4000/api/v1/PropertyListing${search}`)
+        axios.get(`http://localhost:4000/api/v1/PropertyListing${search}`)
 
         .then(({data}) => setProperties(data))
         .catch((err)=> console.log(err))
@@ -38,7 +38,7 @@ const Properties = ({userID}) => {
     },[])
 
     const handleSaveProperty = (propertyId) => {
-        axios.post('https://localhost:4000/api/v1/Favourite', {
+        axios.post('http://localhost:4000/api/v1/Favourite', {
             propertyListing: propertyId,
             fbUserId: userID
         })
