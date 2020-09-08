@@ -28,7 +28,7 @@ const Properties = ({userID}) => {
     }, [search])
 
     useEffect(()=>{
-        axios.get('https://localhost:4000/api/v1/PropertyListing')
+        axios.get('http://localhost:4000/api/v1/PropertyListing')
         .then(response => {
             setProperties(response.data)
         })
