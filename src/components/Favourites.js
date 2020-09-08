@@ -10,7 +10,7 @@ const Favourites = () => {
     const [alert, setAlert] = useState({message: '', isSuccess: false})
 
     useEffect(()=> {
-        axios.get('https://localhost:4000/api/v1/Favourite?populate=propertyListing')
+        axios.get('http://localhost:4000/api/v1/Favourite')
         .then(
         (res) => 
         setFavourites((res.data)))
@@ -20,7 +20,7 @@ const Favourites = () => {
 
 
     const removeFavourite = (_id) => {
-        axios.delete(`https://localhost:4000/api/v1/Favourite/${_id}`)
+        axios.delete(`http://localhost:4000/api/v1/Favourite/${_id}`)
         .then(()=> setFavourites(favourites.filter((favourite) => favourite._id !== _id )))
         .then(() => setAlert({message:'Deleteted', isSuccess: true}))
         .then(setTimeout(() => setAlert({message:'', isSuccess:false}), 1000 ))
