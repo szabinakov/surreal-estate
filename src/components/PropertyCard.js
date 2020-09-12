@@ -51,7 +51,7 @@ const PropertyCard = ({index, _id, title, type, bedrooms, bathrooms, price, city
 }
 
 PropertyCard.propTypes = {
-    details: PropTypes.array.isRequired
+    details: PropTypes.array
 }
 
 export default PropertyCard

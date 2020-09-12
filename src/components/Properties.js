@@ -43,7 +43,7 @@ const Properties = ({userID}) => {
             fbUserId: userID
         })
     }
-
+    
     return (
         <>
         {alert.message && <Alert message={alert.message}/>}
