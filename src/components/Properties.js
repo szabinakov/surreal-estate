@@ -49,13 +49,26 @@ const Properties = ({userID}) => {
         {alert.message && <Alert message={alert.message}/>}
         <div className='Properties'>
                 <SideBar/>
-                <PropertyCard 
-                details={properties}
-                userID={userID}
-                onSaveProperty={handleSaveProperty}/>
+                {properties.map((property, index) => 
+                    <PropertyCard
+                        _id={property._id}
+                        key={index}
+                        title={property.title}
+                        types={property.types}
+                        bedrooms={property.bedrooms}
+                        bathrooms={property.bathrooms}
+                        price={property.price}
+                        city={property.city}
+                        email={property.email}
+                        userID={userID}
+                        onSaveProperty={handleSaveProperty}
+                        />)
+                }
         </div>
         </>
     )
 }
+
+
 
 export default Properties
