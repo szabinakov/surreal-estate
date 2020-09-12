@@ -28,7 +28,7 @@ const Properties = ({userID}) => {
     }, [search])
 
     useEffect(()=>{
-        axios.get('http://surreal-estate-eight.vercel.app/api/v1/PropertyListing')
+        axios.get('https://surreal-estate-eight.vercel.app/api/v1/PropertyListing')
         .then(response => {
             setProperties(response.data)
         })
@@ -38,7 +38,7 @@ const Properties = ({userID}) => {
     },[])
 
     const handleSaveProperty = (propertyId) => {
-        axios.post('http://surreal-estate-eight.vercel.app/api/v1/Favourite?populate=propertyListing', {
+        axios.post('https://surreal-estate-eight.vercel.app/api/v1/Favourite?populate=propertyListing', {
             propertyListing: propertyId,
             fbUserId: userID
         })
