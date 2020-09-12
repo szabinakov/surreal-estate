@@ -21,7 +21,7 @@ const Properties = ({userID}) => {
     
 
     useEffect(() => {
-        axios.get(`http://surreal-estate-eight.vercel.app/api/v1/PropertyListing${search}`)
+        axios.get(`https://surreal-estate-eight.vercel.app/api/v1/PropertyListing${search}`)
 
         .then(({data}) => setProperties(data))
         .catch((err)=> console.log(err))
