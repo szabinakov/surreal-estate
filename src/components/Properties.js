@@ -21,14 +21,14 @@ const Properties = ({userID}) => {
     
 
     useEffect(() => {
-        axios.get(`https://surreal-estate-eight.vercel.app/api/v1/PropertyListing${search}`)
+        axios.get(`http://localhost/4000/api/v1/PropertyListing${search}`)
 
         .then(({data}) => setProperties(data))
         .catch((err)=> console.log(err))
     }, [search])
 
     useEffect(()=>{
-        axios.get('https://surreal-estate-eight.vercel.app/api/v1/PropertyListing')
+        axios.get('http://localhost/4000/api/v1/PropertyListing')
         .then(response => {
             setProperties(response.data)
         })
@@ -38,7 +38,7 @@ const Properties = ({userID}) => {
     },[])
 
     const handleSaveProperty = (propertyId) => {
-        axios.post('https://surreal-estate-eight.vercel.app/api/v1/Favourite?populate=propertyListing', {
+        axios.post('http://localhost/4000/api/v1/Favourite?populate=propertyListing', {
             propertyListing: propertyId,
             fbUserId: userID
         })
@@ -49,10 +49,12 @@ const Properties = ({userID}) => {
         {alert.message && <Alert message={alert.message}/>}
         <div className='Properties'>
                 <SideBar/>
-                {properties.map((property, index) => 
+                {properties.map((property) => (
+                    
+                    <div>
                     <PropertyCard
                         _id={property._id}
-                        key={index}
+                        // key={index}
                         title={property.title}
                         types={property.types}
                         bedrooms={property.bedrooms}
@@ -62,7 +64,8 @@ const Properties = ({userID}) => {
                         email={property.email}
                         userID={userID}
                         onSaveProperty={handleSaveProperty}
-                        />)
+                        />
+                    </div>))
                 }
         </div>
         </>
